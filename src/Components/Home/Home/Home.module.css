@@ -1,0 +1,138 @@
+.parent {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background-image: url(../Pictures/banner2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #28282881;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.container .card {
+  width: 600px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.container .card h3 {
+  font-size: 70px;
+}
+.container .card p {
+  color: #fff;
+}
+.container .card:nth-child(2) {
+  width: 250px;
+}
+.container .img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: rotete infinite 4s;
+  position: absolute;
+  z-index: 10;
+  right: 10%;
+  top: 20%;
+}
+.container .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 2s;
+  object-fit: cover;
+  transform: scale(1.1);
+}
+.info {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card a {
+  width: 163px;
+  height: 53px;
+  padding: 18px, 28px, 18px, 28px;
+  border-radius: 118px;
+  gap: 10px;
+  background-color: #ad343e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.card a:nth-child(2) {
+  background-color: transparent;
+  border: 1.5px solid;
+}
+.container .img img:hover {
+  transform: scale(1.3);
+  transition: 2s;
+  cursor: pointer;
+}
+/* Here for Hover */
+.card a:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.card a:nth-child(2):hover {
+  background-color: #ad343e;
+  border: #ad343e;
+}
+@keyframes rotete {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Here for Media Query */
+@media (max-width: 768px) {
+  .container .img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 425px) {
+  .container .img {
+    width: 120px;
+    height: 120px;
+  }
+  .parent h3 {
+    font-size: 50px !important;
+  }
+  .parent p {
+    font-size: 15px !important;
+    padding: 0 8px;
+  }
+  .container .img {
+    display: none;
+  }
+  .card {
+    width: 100% !important;
+  }
+  .card a {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 200;
+    font-family: sans-serif;
+  }
+}

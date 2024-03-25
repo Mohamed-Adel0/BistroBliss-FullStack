@@ -1,0 +1,11 @@
+/* Here for Media Query */
+@media (max-width: 1265px) {
+    .parent {
+      height: auto;
+      padding: 20px 0;
+    }
+    .container {
+      gap: 20px;
+      justify-content: center;
+    }
+  }

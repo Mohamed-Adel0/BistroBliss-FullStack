@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+  .container-booktable form {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+    width: 80% !important;
+  }
+}
+@media (max-width: 425px) {
+  .container-booktable form {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+    width: 80% !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 320px) {
+  .container-booktable form {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}

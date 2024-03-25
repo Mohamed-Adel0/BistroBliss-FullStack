@@ -1,0 +1,71 @@
+.parent {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .text {
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .text h3 {
+  color: var(--Neutral-07, #2c2f24);
+  font-family: " DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.container .text p {
+  color: var(--Neutral-07, #2c2f24);
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.container .text:nth-child(1) p {
+  color: #ad343e !important;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.72px;
+}
+
+/* Here for Media Query */
+@media (max-width: 1265px) {
+  .parent {
+    height: auto;
+    padding: 20px 0;
+  }
+  .container {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    justify-content: flex-start;
+    width: 80%;
+  }
+}

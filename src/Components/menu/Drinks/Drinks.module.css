@@ -1,0 +1,93 @@
+.parent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container .card {
+  width: 230px;
+  height: 290px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1.5px solid var(--neutral-03, #dbdfd0);
+  background: var(--neutral-01, #fff);
+}
+.card .img {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  transition: .3s;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  transition: 0.3s;
+}
+.card .text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .text span {
+  color: #ad343e;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.72px;
+}
+.text .h3 {
+  color: var(--neutral-07, #2c2f24);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.text p {
+  color: var(--neutral-06, #414536);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+/* Here for Media Query */
+@media (max-width: 1265px) {
+  .parent {
+    height: auto;
+    padding: 20px 0;
+  }
+  .container {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* Here for Hover */
+.img img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}

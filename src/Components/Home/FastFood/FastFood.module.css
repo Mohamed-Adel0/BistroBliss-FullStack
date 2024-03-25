@@ -1,0 +1,157 @@
+.parent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 85%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .card {
+  width: 650px;
+  height: 100%;
+}
+.card .boximgs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.boximgs .img {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.boximgs .img:nth-child(1) {
+  width: 75%;
+  justify-content: flex-start;
+}
+.img:nth-child(1) img {
+  width: 100%;
+  height: 95%;
+}
+.boximgs .img:nth-child(2) img {
+  width: 80%;
+  height: 55%;
+}
+.boximgs .img:nth-child(2) img:nth-child(2) {
+  height: 40%;
+}
+.boximgs .img:nth-child(2) .img {
+  /* justify-content: flex-end; */
+  align-items: flex-end;
+}
+/* Here 2nd Card for style */
+.container .card:nth-child(2) {
+  width: 375px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card .text {
+  height: 40%;
+  width: auto;
+  gap: 10px;
+}
+.card .text h3 {
+  width: 461px;
+  color: var(--neutral-07, #2c2f24);
+  font-family: "Playfair Display";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60.5px;
+}
+.card .text p {
+  color: var(--neutral-06, #414536);
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.card .icons {
+  width: auto;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.card .icons .icon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.icons .icon p {
+  color: var(--neutral-07, #2c2f24);
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 130% */
+}
+.icons .icon button {
+  width: 22px;
+  height: 22px;
+  font-size: 15px;
+  flex-shrink: 0;
+  color: #fff;
+  background-color: #ad343e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+/* Here for Media Query */
+@media (max-width: 1265px) {
+  .parent {
+    height: auto;
+    padding: 20px 0;
+  }
+  .container {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 100% !important;
+  }
+}
+@media (max-width: 425px) {
+  .container h3 {
+    font-size: 40px !important;
+    line-height: 46px !important;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px !important;
+  }
+  .icons {
+    width: 100% !important;
+  }
+}

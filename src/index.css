@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+a {
+  margin: 0 !important;
+  font-family: sans-serif;
+}
+header .active {
+  padding: 4px 10px;
+  background-color: #dbdfd0;
+  border-radius: 15px;
+  color: #fff;
+}
+
+h3 {
+  color: (#2c2f24);
+  font-family: " Playfair Display";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60.5px;
+}
+p {
+  color: var(--neutral-06, #414536);
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.menu a:hover {
+  background-color: #ad343e;
+  color: #fff;
+}
+::selection {
+  background-color: #dc3545 !important;
+  color: #fff;
+}
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 16px !important;
+  scroll-behavior: smooth !important;
+}
+.pending {
+  background-color: gold !important;
+}
+/* Here for style arrow */
+
+.carousel-control-next-icon {
+  position: absolute;
+  bottom: 8%;
+  width: 48px !important;
+  height: 48px !important;
+  overflow: hidden;
+}
+.carousel-control-prev-icon {
+  position: absolute;
+  /* left: 550%; */
+  bottom: 8%;
+  width: 48px !important;
+  height: 48px !important;
+}
+.carousel-control-prev {
+  position: relative;
+  left: 80% !important;
+  top: 20% !important;
+  right: 0 !important;
+  height: 0%;
+}
+.carousel-control-next {
+  height: 0%;
+  top: 20% !important;
+}
+/* .login .active {
+  border-bottom: 2.8px #8a86e3 solid;
+} */
+

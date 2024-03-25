@@ -1,0 +1,186 @@
+.parent {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.parent .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.card .img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+}
+/* Here for bg for black ground */
+.img .bg {
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.bg img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.bg h3 {
+  width: 596px;
+  color: var(--neutral-01, #fff);
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60.5px;
+}
+/* Here for New Card for style */
+.card:nth-child(2) {
+  width: 85%;
+  height: 200px;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .box {
+  width: 350px;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.box .text {
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.box .img {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.box .img img {
+  width: 48px;
+  height: 48px;
+}
+.text h3 {
+  color: (#2c2f24);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.text p {
+  color: (#414536);
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  color: #282828;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: #fff;
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px;
+  animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running
+    pulse;
+  align-items: center;
+  border: 0;
+}
+
+.button:is(:hover, :focus) {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 45px rgba(193, 244, 246, 0);
+  }
+}
+
+/* Here for Media Query */
+@media (max-width: 1265px) {
+  .parent {
+    height: auto;
+    padding: 20px 0;
+  }
+  .container {
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .container .card {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .card:nth-child(2) {
+    justify-content: space-evenly;
+    height: auto !important;
+    padding: 15px 0;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card:nth-child(2) {
+    justify-content: flex-start;
+  }
+  .card:nth-child(1) h3 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 626px) {
+  .card:nth-child(1) {
+    height: 400px;
+  }
+  .card:nth-child(1) h3 {
+    font-size: 40px;
+  }
+}

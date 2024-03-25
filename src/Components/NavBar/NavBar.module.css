@@ -1,0 +1,333 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 55px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 56px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+header .img {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+header .img h3 {
+  color: #474747;
+  font-family: "DM Sans", sans-serif;
+  font-size: 42.667px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 29.333px; /* 68.75% */
+  letter-spacing: -0.4px;
+  margin: 0 !important;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  transform: translateY(12%);
+  z-index: 777;
+  /* padding-right: 40px; */
+}
+header li {
+  position: relative;
+  padding: 0 10px;
+}
+header a {
+  color: #282828 !important;
+  /* Body/16px/Medium */
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  text-decoration: none;
+  margin: 0 !important;
+}
+/* -------------Here for Drop Menu-------------------- */
+.dropBar {
+  font-weight: 100;
+  list-style: none;
+}
+.dropdownMenu {
+  position: absolute;
+  display: block;
+  top: 65%;
+  right: -70%;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: #a3a3a357 1px solid;
+  background-color: #fff;
+  z-index: 777;
+}
+.dropdownMenu {
+  display: none;
+}
+.dropdownMenu li {
+  width: 170px;
+  height: 40px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.dropBar:hover .dropdownMenu {
+  display: block;
+}
+/* -----------------Here for Right Menu -------------- */
+.rightMenu {
+  position: relative;
+}
+.dropRightMenu {
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  display: block;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  border: #a3a3a357 1px solid;
+  background-color: #fff;
+  z-index: 778;
+}
+.hx {
+  display: none;
+}
+.dropRightMenu {
+  display: none;
+}
+.dropRightMenu li {
+  width: 170px;
+  height: 40px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.rightMenu:hover .dropRightMenu {
+  display: block;
+}
+/* -------------End for Drop Menu-------------------- */
+header button {
+  cursor: pointer;
+}
+.icon {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+.icon h1 {
+  height: 45px;
+  width: 45px;
+  object-fit: fill;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #dc3848;
+}
+.icon .register {
+  font-size: 17px;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon .out {
+  font-size: 25px;
+  line-height: 20px;
+  display: none;
+}
+.icon .out:hover {
+  color: #dc3545 !important;
+}
+.icon a:nth-child(2) {
+  display: none;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.icon a:nth-child(1) {
+  display: flex;
+  padding: 9px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 118px;
+  border: 1.5px solid var(--neutral-07, #2c2f24);
+}
+/* Here for button to top Scroll */
+.top {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  right: 3%;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1.5px solid #dc3545;
+  display: none;
+  z-index: 999;
+}
+.top button {
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  background-color: transparent;
+  overflow: hidden;
+  color: #dc3545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.top button:hover {
+  background-color: #dc3545;
+  color: #fff;
+  transition: 0.3s;
+}
+.showScroll {
+  display: flex;
+}
+.showProfile {
+  display: flex !important;
+}
+.hidex {
+  display: none !important;
+}
+/* Here Style for login */
+
+@media (min-width: 991px) {
+  header .menu {
+    display: none;
+  }
+  header .icons {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  header ul {
+    display: none;
+  }
+
+  header li {
+    padding: 13px 10px;
+  }
+  /* header .icons {
+    width: 200px;
+  } */
+  header .icon {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  header .menu {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu button {
+    font-size: 25px;
+    font-weight: 300;
+    background-color: transparent;
+  }
+  nav {
+    position: relative;
+  }
+
+  header .show {
+    position: absolute;
+    top: 49%;
+    left: -8%;
+    right: -8.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 1s;
+    background-color: #fff;
+    border: 1px solid rgba(116, 111, 111, 0.473);
+  }
+
+  .dropdownMenu li {
+    width: 145px;
+    text-align: center;
+  }
+  .dropdownMenu {
+    transform: translateX(-20%);
+    top: 100%;
+  }
+  .dropRightMenu li {
+    width: 110px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  header .img h3 {
+    font-size: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 550px) {
+  header .img h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 563px) {
+  .icon {
+    display: none !important;
+  }
+  header .img h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 320px) {
+  header img {
+    width: 45px;
+    height: 44px;
+  }
+}

@@ -1,0 +1,175 @@
+.parent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 15px;
+}
+.card .img {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img img {
+  width: 90%;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 12px 12px 0px 0px;
+  background: lightgray 50% / cover no-repeat;
+}
+.card .text {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .text h3 {
+  color: var(--Neutral-07, #2c2f24);
+  text-align: center;
+  font-family: " Playfair Display";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60.5px;
+  width: 900px;
+}
+/* Here for 2nd Card for Style */
+
+.card:nth-child(2) .text {
+  width: 90%;
+  height: 47%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start !important;
+  flex-direction: column;
+  gap: 10px;
+}
+.card:nth-child(2) .text h3 {
+  color: var(--Neutral-07, #2c2f24);
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.72px;
+  text-align: start;
+}
+.card:nth-child(2) .text p {
+  color: var(--Neutral-06, #414536);
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  width: 1000px;
+}
+
+/* Here for 3rd Card for Style */
+
+.card:nth-child(3) .img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card:nth-child(3) .text {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 90%;
+}
+.card:nth-child(3) .text h3 {
+  color: var(--Neutral-07, #2c2f24);
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.72px;
+  text-align: start;
+}
+.card:nth-child(3) .text p {
+  color: var(--Neutral-06, #414536);
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+/* Here for Media Query */
+@media (max-width: 1265px) {
+  .parent {
+    height: auto;
+    padding: 20px 0;
+  }
+  .container {
+    gap: 20px;
+    justify-content: center;
+  }
+  .text {
+    height: auto;
+  }
+  .text p,
+  h3 {
+    width: auto !important;
+  }
+}
+@media (max-width: 1024px) {
+  .text h3 {
+    font-size: 45px !important;
+  }
+}
+@media (max-width: 768px) {
+  .text .h3 {
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+  .card h3 {
+    font-size: 20px !important;
+  }
+  .card p {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 425px) {
+  .text .h3 {
+    font-size: 20px !important;
+    line-height: 30px !important;
+  }
+  .card h3 {
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    font-weight: 400 !important;
+  }
+  .card p {
+    font-size: 11px !important;
+    line-height: 20px !important;
+  }
+}
